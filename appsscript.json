@@ -1,0 +1,42 @@
+{
+  "timeZone": "Europe/Berlin",
+  "exceptionLogging": "STACKDRIVER",
+  "runtimeVersion": "V8",
+  "oauthScopes": [
+    "https://www.googleapis.com/auth/userinfo.email",
+    "https://www.googleapis.com/auth/userinfo.profile",
+    "https://www.googleapis.com/auth/gmail.addons.current.message.readonly",
+    "https://www.googleapis.com/auth/gmail.addons.execute",
+    "https://www.googleapis.com/auth/script.locale",
+    "https://www.googleapis.com/auth/spreadsheets"
+  ],
+  "addOns": {
+    "common": {
+      "name": "Happiness Rating",
+      "logoUrl": "https://nevensuboticstiftung.de/cms/wp-content/uploads/2020/12/N2S_LOGO_m.png",
+      "useLocaleFromApp": true,
+      "layoutProperties": {
+        "primaryColor": "#00a8cd",
+        "secondaryColor": "#f5c630"
+      },
+      "homepageTrigger": {
+        "runFunction": "onHomepage",
+        "enabled": true
+      },
+      "universalActions": [
+        {
+          "label": "Sheet",
+          "openLink": "https://docs.google.com/spreadsheets/d/1MLkyIc3Kd7EFZAV-yxiuSPO95HiWwm-8TTs9gmgAj08/edit#gid=0"
+        }
+      ]
+    },
+    "gmail": {
+      "contextualTriggers": [
+        {
+          "unconditional": {},
+          "onTriggerFunction": "onGmailMessage"
+        }
+      ]
+    }
+  }
+}
