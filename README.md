@@ -6,8 +6,8 @@ Workspace AddOn for Google which allows for easy collection of Supporter Feedbac
 1. Create a Sheet within that Spreadsheet, note its name
 1. Create a Apps Script Project
 1. Paste Code.js your Apps Script Project
-    1. Set the `TARGET_SHEET_ID` to your note from **step 1**
-    1. Set the `SHEET_NAME` to your note from **step 2**
+    1. Set the `TARGET_SHEET_ID` (line 46) to your note from **step 1**
+    1. Set the `SHEET_NAME` (line 48) to your note from **step 2**
 1. Paste and Modify appsscript.json (the manifest file) into your appsscript.json 
     1. Change the `name`
     1. Change the `logoUrl`
